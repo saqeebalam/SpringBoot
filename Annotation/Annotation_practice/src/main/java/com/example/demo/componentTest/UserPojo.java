@@ -2,6 +2,9 @@ package com.example.demo.componentTest;
 
 import org.springframework.stereotype.Component;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+
 @Component
 public class UserPojo {
 	
@@ -31,6 +34,22 @@ UserPojo object created from default constructor
 		super();
 		System.out.println("UserPojo object created from default constructor");
 	}
+	
+	// This method will be called after the bean is created and dependencies are injected.
+	//Use case if we have to perform any initialization task after the bean is created then we can use this annotation.
+	@PostConstruct
+	public void postDisplay() {
+		System.out.println("Post Constructor call display method in UserPojo class");
+	}
+	
+	// This method will be called before the bean is destroyed.
+	//Use case if we have to perform any cleanup task before the bean is destroyed then we can use this annotation.
+	@PreDestroy
+	public void preDestoryDisplay() {
+		System.out.println("Pre Destory call display method in UserPojo class");
+	}
+	
+	
 	
 	
 	
