@@ -34,6 +34,19 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
+		
+		<!-- This annotation is used for web like restController or other annotation -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<!-- This dependency is used to add/enable actuator -->
+		<!--<dependency>
+    		<groupId>org.springframework.boot</groupId>
+   			 <artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>-->
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

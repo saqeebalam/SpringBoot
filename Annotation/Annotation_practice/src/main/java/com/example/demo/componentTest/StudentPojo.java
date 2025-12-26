@@ -1,6 +1,5 @@
 package com.example.demo.componentTest;
 
-import org.springframework.stereotype.Component;
 
 //@Component
 public class StudentPojo {
