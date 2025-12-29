@@ -1,0 +1,287 @@
+{
+  "info": {
+    "_postman_id": "96fa9c06-0a81-45ea-8396-ec1ba65d5faf",
+    "name": "MovieStore",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "FETCH ALL Actor List",
+      "id": "2ca2ace0-a737-4c23-b374-0deafd448658",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/actors/getAll",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "actors",
+            "getAll"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UPDATE",
+      "id": "8f8d0709-d781-4533-bca6-99463d7199a1",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/actors/50",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "actors",
+            "50"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "INSERT",
+      "id": "bbf13057-fd39-47f8-96d8-42a33a7d6c0c",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\": \"TOM\",\r\n    \"lastName\": \"HANKS\",\r\n    \"lastUpdate\": \"2025-12-29T23:45:00\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/actors",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "actors"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "FETCH BY ID",
+      "id": "8f42fba5-5d63-4b3e-abec-a917203b9a17",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/actors/50",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "actors",
+            "50"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PATCH",
+      "id": "59907982-9093-4038-89b1-de5473831d05",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\": \"ASUS\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/actors/203",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "actors",
+            "203"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Number of Count with Field",
+      "id": "3b7ebeee-5194-41fb-b074-00be00690cab",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\": \"W\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/actors/count/by-example",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "actors",
+            "count",
+            "by-example"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search with field",
+      "id": "c11d9b31-65bf-46a7-acd0-f3a6ae54a756",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"lastName\": \"CLOSE\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/actors/search",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "actors",
+            "search"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Pagination",
+      "id": "0f951be6-b081-40a8-ac43-1b252f2f2c30",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/actors/paginated?page=0&size=10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "actors",
+            "paginated"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "0"
+            },
+            {
+              "key": "size",
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Compare",
+      "id": "39655f69-dbb9-4459-a58b-b5d43acb4b8e",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/actors/compare/1/204",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "actors",
+            "compare",
+            "1",
+            "204"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
